@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: false
-          tags: go-docker:latest, go-docker:latest
+          tags: docker-gs-ping:latest, docker-gs-ping:latest
 
       - name: Run functional tests
         run:  go test -v ./...
