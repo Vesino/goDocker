@@ -32,5 +32,4 @@ jobs:
           push: false
           tags: docker-gs-ping:latest, docker-gs-ping:latest
 
-      - name: Run functional tests
-        run:  go test -v ./...
+# TODO Run the tests
