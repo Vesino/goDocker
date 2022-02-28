@@ -25,12 +25,16 @@ services:
       - mynet
     ports:
       - 80:8080
+
+    env_file:
+      - ./.env
+
     environment:
-      - PGUSER=totoro
-      - PGPASSWORD=${PGPASSWORD:?database password not set}
+      - PGDATABASE=${PGDATABASE}
       - PGHOST=db
-      - PGPORT=26257
-      - PGDATABASE=mydb
+      - PGPASSWORD=${PGPASSWORD}
+      - PGPORT=${PGPORT}
+      - PGUSER=${PGUSER}
 
 volumes:
   roach:
